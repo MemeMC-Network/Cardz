@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛒 | Card Marketplace</title>
+    <title>Your Cart</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <a>Cardz</a>
-            <a>|</a>
             <a href="index.html">🏠 Home</a>
             <a href="soccer.html">⚽ Soccer</a>
             <a href="nba.html">🏀 NBA</a>
@@ -24,17 +22,15 @@
     </nav>
 
     <header>
-        <h1>Your Cart</h1>
+        <h1>Your Shopping Cart</h1>
     </header>
 
     <main>
-        <section class="cart-items">
-            <h2>Your Items</h2>
-            <ul id="cart-list">
-                <!-- Items will be dynamically added here -->
-            </ul>
-            <p>Total: $<span id="total-price">0</span></p>
-            <button id="checkout-btn">Checkout</button>
+        <section class="cart">
+            <h2>Items in Your Cart</h2>
+            <ul id="cart-list"></ul>
+            <p><strong>Total Price: $<span id="total-price">0</span></strong></p>
+            <button id="clear-cart">Clear Cart</button>
         </section>
     </main>
 
