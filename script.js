@@ -31,11 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cart System
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Update Cart Count
+    // Update Cart Count (on all pages)
     const cartCount = document.getElementById('cart-count');
-    cartCount.innerText = cart.length;
+    if (cartCount) {
+        cartCount.innerText = cart.length;
+    }
 
-    // Display Cart Items (in cart.html)
+    // Add to Cart (on all pages with cards)
+    document.querySelectorAll('.buy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.card');
+            const name = card.getAttribute('data-name');
+            const price = parseInt(card.getAttribute('data-price'));
+
+            const newItem = { name, price };
+            cart.push(newItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update Cart Count in Navbar
+            if (cartCount) {
+                cartCount.innerText = cart.length;
+            }
+
+            alert(`${name} has been added to your cart!`);
+        });
+    });
+
+    // Display Cart Items (on cart.html page)
     if (document.body.contains(document.getElementById('cart-list'))) {
         const cartList = document.getElementById('cart-list');
         const totalPrice = document.getElementById('total-price');
@@ -52,21 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrice.innerText = total;
     }
 
-    // Add to Cart (on all pages with cards)
-    document.querySelectorAll('.buy-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const card = button.closest('.card');
-            const name = card.getAttribute('data-name');
-            const price = parseInt(card.getAttribute('data-price'));
-
-            const newItem = { name, price };
-            cart.push(newItem);
-            localStorage.setItem('cart', JSON.stringify(cart));
-
-            // Update Cart Count in Navbar
+    // Clear Cart (if there's a clear button on the cart page)
+    const clearCartButton = document.getElementById('clear-cart');
+    if (clearCartButton) {
+        clearCartButton.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            cart = [];
             cartCount.innerText = cart.length;
-
-            alert(`${name} has been added to your cart!`);
+            alert("Your cart has been cleared.");
+            window.location.reload(); // Reload the page to reflect the change
         });
-    });
+    }
 });
