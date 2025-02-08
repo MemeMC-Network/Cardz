@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,27 +8,55 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">🏠</a>
-        <a href="soccer.html">⚽ </a>
-        <a href="nba.html">🏀</a>
-        <a href="mlb.html">⚾</a>
-        <a href="nfl.html">🏈</a>
-        <a href="nhl.html">🏑</a>
+        <div class="logo">Card Marketplace</div>
+        <ul class="nav-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="soccer.html">⚽ Soccer</a>
+            <a href="nba.html">🏀 NBA</a>
+            <a href="pokemon.html">🎴 Pokemon</a>
+            <a href="mlb.html">⚾ MLB</a>
+            <a href="nfl.html">🏈 NFL</a>
+            <a href="nhl.html">🏑 NHL</a>
+        </ul>
+        <button id="dark-mode-toggle">🌙</button>
+        <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
     </nav>
+
     <header>
         <h1>Welcome to Card Marketplace</h1>
         <p>Buy and collect your favorite sports and gaming cards.</p>
     </header>
+
     <main>
         <section class="featured">
             <h2>Featured Cards</h2>
             <div class="cards">
-                <div class="card"> <h3>Rare Soccer Card</h3> <p>Price: $120</p> <button class="buy-btn">Buy Now</button> </div>
-                <div class="card"> <h3>Signed NBA Card</h3> <p>Price: $250</p> <button class="buy-btn">Buy Now</button> </div>
-                <div class="card"> <h3>Charizard Pokemon Card</h3> <p>Price: $500</p> <button class="buy-btn">Buy Now</button> </div>
+                <div class="card" data-name="Rare Soccer Card" data-price="120">
+                    <img src="images/soccer-card.jpg" alt="Soccer Card">
+                    <h3>Rare Soccer Card</h3>
+                    <p>Price: $120</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="card" data-name="Signed NBA Card" data-price="250">
+                    <img src="images/nba-card.jpg" alt="NBA Card">
+                    <h3>Signed NBA Card</h3>
+                    <p>Price: $250</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="card" data-name="Charizard Pokemon Card" data-price="500">
+                    <img src="images/charizard-card.jpg" alt="Charizard Card">
+                    <h3>Charizard Pokémon Card</h3>
+                    <p>Price: $500</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>© 2025 Card Marketplace | All rights reserved</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
