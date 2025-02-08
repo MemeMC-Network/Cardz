@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Cards - Card Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="/">🏠 Home</a>
+            <a href="soccer">⚽ Soccer</a>
+            <a href="nba">🏀 NBA</a>
+            <a href="pokemon">🎴 Pokemon</a>
+            <a href="mlb">⚾ MLB</a>
+            <a href="nfl">🏈 NFL</a>
+            <a href="nhl">🏑 NHL</a>
+        </ul>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+        <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    </nav>
+
+    <header>
+        <h1>MLB Cards</h1>
+        <p>Browse our collection of Major League Baseball cards.</p>
+    </header>
+
+    <main>
+        <section class="featured">
+            <h2>Featured MLB Cards</h2>
+            <div class="cards">
+                <div class="card" data-name="Autographed MLB Card" data-price="150">
+                    <img src="images/mlb-card.jpg" alt="Autographed MLB Card">
+                    <h3>Autographed MLB Card</h3>
+                    <p>Price: $150</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="card" data-name="Limited Edition MLB Card" data-price="200">
+                    <img src="images/mlb-limited-card.jpg" alt="Limited Edition MLB Card">
+                    <h3>Limited Edition MLB Card</h3>
+                    <p>Price: $200</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Card Marketplace | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
