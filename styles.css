@@ -3,18 +3,18 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eef2f3;
+    background-color: #f4f4f9;
     text-align: center;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 80px; /* Adjusted to match navbar height */
+    padding-top: 80px;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.9);
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -26,6 +26,12 @@ body {
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     gap: 20px;
+    transition: background 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background-color: rgba(34, 34, 34, 0.6);
 }
 
 .navbar a {
@@ -41,16 +47,16 @@ body {
 .navbar a:hover {
     color: #f4a261;
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-/* Main Content Wrapper to Push Footer to Bottom */
+/* Main Content */
 .main-content {
     flex: 1;
-    padding-bottom: 60px; /* Prevents content from overlapping footer */
+    padding-bottom: 60px;
 }
 
-/* Dark Mode Toggle Button */
+/* Dark Mode Toggle */
 .dark-mode-toggle {
     background-color: #ff6b6b;
     color: white;
@@ -64,6 +70,7 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode-toggle:hover {
@@ -131,7 +138,7 @@ header {
 }
 
 /* Buy Button */
-.buy-btn {
+.buy-btn, .dark-mode-toggle {
     background-color: #ff6b6b;
     color: white;
     border: none;
@@ -142,7 +149,7 @@ header {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.buy-btn:hover {
+.buy-btn:hover, .dark-mode-toggle:hover {
     background-color: #d43f3f;
     transform: scale(1.1);
 }
@@ -159,4 +166,28 @@ footer {
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark-mode .category, 
+.dark-mode .featured, 
+.dark-mode .card {
+    background: #2a2a2a;
+    color: #fff;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .buy-btn, 
+.dark-mode .dark-mode-toggle {
+    background-color: #ff6b6b;
+}
+
+.dark-mode .buy-btn:hover, 
+.dark-mode .dark-mode-toggle:hover {
+    background-color: #d43f3f;
 }
