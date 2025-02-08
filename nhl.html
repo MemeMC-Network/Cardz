@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Cards - Card Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="soccer.html">⚽ Soccer</a>
+            <a href="nba.html">🏀 NBA</a>
+            <a href="pokemon.html">🎴 Pokemon</a>
+            <a href="mlb.html">⚾ MLB</a>
+            <a href="nfl.html">🏈 NFL</a>
+            <a href="nhl.html">🏑 NHL</a>
+        </ul>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+        <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    </nav>
+
+    <header>
+        <h1>NHL Cards</h1>
+        <p>Get your hands on rare NHL trading cards.</p>
+    </header>
+
+    <main>
+        <section class="featured">
+            <h2>Featured NHL Cards</h2>
+            <div class="cards">
+                <div class="card" data-name="Exclusive NHL Card" data-price="250">
+                    <img src="images/nhl-card.jpg" alt="Exclusive NHL Card">
+                    <h3>Exclusive NHL Card</h3>
+                    <p>Price: $250</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="card" data-name="Vintage NHL Card" data-price="400">
+                    <img src="images/nhl-vintage-card.jpg" alt="Vintage NHL Card">
+                    <h3>Vintage NHL Card</h3>
+                    <p>Price: $400</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Card Marketplace | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
